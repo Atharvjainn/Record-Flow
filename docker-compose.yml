@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+        NEXT_PUBLIC_CLOUDINARY_API_KEY: ${NEXT_PUBLIC_CLOUDINARY_API_KEY}
+        NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET: ${NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL}
+        DATABASE_URL: ${DATABASE_URL}
+    image: recordflow:local
+    container_name: recordflow
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
