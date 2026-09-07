@@ -8,7 +8,7 @@ It is built using a **modern TypeScript-first full-stack web stack**, focusing o
 
 ## 🚀 Live Demo
 
-🔗 https://record-flow.vercel.app/
+🔗 https://cicid.vercel.app/
 
 ---
 
